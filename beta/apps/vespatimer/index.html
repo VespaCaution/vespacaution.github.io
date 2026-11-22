@@ -274,6 +274,7 @@
   <button onclick="exportHistory()">📋 <span data-lang="export_history">Exporter historique</span></button>
   <button onclick="exportGPX()">📍 GPX</button>
   <button onclick="exportKML()">🌍 KML</button>
+  <button onclick="exportJSON()">📤 JSON</button
   <button onclick="closeModal('exportModal'); exportVCFLASH();">⚡ <span data-lang="export_vc">Exporter en VCFLASH</span></button>
 
   <hr style="border:0;border-top:1px dashed var(--border);margin:8px 0;">
@@ -282,8 +283,7 @@
   
   <button class="btn-gold" onclick="document.getElementById('importFile').click()" style="display:flex; flex-direction:column; align-items:center; gap:2px;">
     <span>📥 <span data-lang="import_btn">Importer JSON</span></span>
-    <span style="font-size:0.65rem; color:var(--danger); font-weight:normal; line-height:1;">(<span data-lang="json_warning">Sera bientôt désactivé</span>)</span>
-  </button>
+      </button>
   
   <button class="btn-gold" onclick="document.getElementById('importHistFile').click()">📋 <span data-lang="import_history">Importer historique</span></button>
   <button class="btn-gold" onclick="openVespafinderModal()">🔗 <span data-lang="import_vespafinder">Importer Vespafinder</span></button>
