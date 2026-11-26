@@ -1271,13 +1271,20 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
 }
 // --- DROPDOWN LOGIC ---
 function toggleAppDropdown(event) {
-    event.stopPropagation(); 
-    const menus = document.querySelectorAll('.app-dropdown-menu');
-    menus.forEach(menu => {
-        if (menu !== event.target.nextElementSibling) {
-            menu.classList.remove('show');
-        }
+    event.stopPropagation();
+    // Find the parent container of the button that was clicked
+    const dropdownContainer = event.target.closest('.app-dropdown');
+    // Find the menu inside that specific container
+    const menu = dropdownContainer.querySelector('.app-dropdown-menu');
+    
+    // Close all other menus
+    document.querySelectorAll('.app-dropdown-menu').forEach(m => {
+        if (m !== menu) m.classList.remove('show');
     });
+    
+    // Toggle the clicked one
+    menu.classList.toggle('show');
+}
     event.target.nextElementSibling.classList.toggle('show');
 }
 
