@@ -1271,10 +1271,9 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
     render();
 }
 // --- DROPDOWN LOGIC ---
-function toggleAppDropdown(event) {
-    event.stopPropagation();
-    // Find the parent container of the button that was clicked
-    const dropdownContainer = event.target.closest('.app-dropdown');
+function toggleAppDropdown(btn) {
+    // Find the parent .app-dropdown container
+    const dropdownContainer = btn.closest('.app-dropdown');
     // Find the menu inside that specific container
     const menu = dropdownContainer.querySelector('.app-dropdown-menu');
     
@@ -1287,7 +1286,6 @@ function toggleAppDropdown(event) {
     menu.classList.toggle('show');
 }
     event.target.nextElementSibling.classList.toggle('show');
-}
 
 window.addEventListener('click', function() {
     document.querySelectorAll('.app-dropdown-menu').forEach(menu => {
