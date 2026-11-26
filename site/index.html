@@ -1179,10 +1179,7 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
             return (translations[currentLang] && translations[currentLang][key]) ? translations[currentLang][key] : key;
         }
   
-        // ==========================================
-        // 2. APP CONFIGURATION & FULL DESCRIPTIONS
-        // ==========================================
-          const appsConfig = {
+       const appsConfig = {
     'vespatimer': {
         title: 'VespaTimer',
         icon: '<img src="../apps/vespatimer/icon.png" style="width:30px; height:30px; border-radius:5px; vertical-align:middle; margin-right:8px;">',
@@ -1207,7 +1204,16 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
                 <ul><li>PDF: Complete report with map.</li><li>JSON: Save and resume later.</li><li>GPX/KML: View nests on Google Earth or GPS.</li></ul>
                 <h3>📋 5. History & 👤 6. Optional Account</h3>
                 <p>Saves 90 days of data. Create a free account for cloud sync and unlimited history.</p>
-                <div style="text-align:center"><a href="../apps/vespatimer/index.html" class="btn main-open-btn">${t('btn_open')}</a></div>
+                <div class="app-dropdown">
+                    <div class="split-app-btn">
+                        <a href="../apps/vespatimer/index.html" class="btn-main">${t('btn_open')}</a>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                    </div>
+                    <div class="app-dropdown-menu">
+                        <button onclick="window.location.href='../apps/vespatimer/index.html'">🌐 Open in Browser</button>
+                        <button onclick="installPWA('../apps/vespatimer/index.html', '../apps/vespatimer/manifest.json')">📲 Install App</button>
+                    </div>
+                </div>
                 <div class="accordion">
                     <div class="accordion-header" onclick="toggleAccordion(this)">${t('btn_instructions')} <span class="accordion-icon">+</span></div>
                     <div class="accordion-content">
@@ -1231,7 +1237,16 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
                 <ul><li>PDF : Rapport complet avec carte.</li><li>JSON: Sauvegarder et reprendre plus tard.</li><li>GPX / KML : Voir les nids sur Google Earth ou GPS.</li></ul>
                 <h3>📋 5. Historique & 👤 6. Compte Optionnel</h3>
                 <p>Sauvegarde automatique des 90 derniers jours. Créez un compte gratuit pour la synchronisation cloud et l'historique illimité.</p>
-                <div style="text-align:center"><a href="../apps/vespatimer/index.html" class="btn main-open-btn">${t('btn_open')}</a></div>
+                <div class="app-dropdown">
+                    <div class="split-app-btn">
+                        <a href="../apps/vespatimer/index.html" class="btn-main">${t('btn_open')}</a>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                    </div>
+                    <div class="app-dropdown-menu">
+                        <button onclick="window.location.href='../apps/vespatimer/index.html'">🌐 Ouvrir dans le navigateur</button>
+                        <button onclick="installPWA('../apps/vespatimer/index.html', '../apps/vespatimer/manifest.json')">📲 Installer l'app</button>
+                    </div>
+                </div>
                 <div class="accordion">
                     <div class="accordion-header" onclick="toggleAccordion(this)">${t('btn_instructions')} <span class="accordion-icon">+</span></div>
                     <div class="accordion-content">
@@ -1255,7 +1270,16 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
                 <ul><li>PDF: Vollständiger Bericht mit Karte.</li><li>JSON: Speichern und später fortsetzen.</li><li>GPX/KML: Nester auf Google Earth anzeigen.</li></ul>
                 <h3>📋 5. Verlauf & 👤 6. Optionales Konto</h3>
                 <p>Speichert Daten für 90 Tage. Erstellen Sie ein kostenloses Konto für Cloud-Synchronisierung und unbegrenzten Verlauf.</p>
-                <div style="text-align:center"><a href="../apps/vespatimer/index.html" class="btn main-open-btn">${t('btn_open')}</a></div>
+                <div class="app-dropdown">
+                    <div class="split-app-btn">
+                        <a href="../apps/vespatimer/index.html" class="btn-main">${t('btn_open')}</a>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                    </div>
+                    <div class="app-dropdown-menu">
+                        <button onclick="window.location.href='../apps/vespatimer/index.html'">🌐 Im Browser öffnen</button>
+                        <button onclick="installPWA('../apps/vespatimer/index.html', '../apps/vespatimer/manifest.json')">📲 App installieren</button>
+                    </div>
+                </div>
                 <div class="accordion">
                     <div class="accordion-header" onclick="toggleAccordion(this)">${t('btn_instructions')} <span class="accordion-icon">+</span></div>
                     <div class="accordion-content">
@@ -1279,7 +1303,16 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
                 <ul><li>PDF: Report completo con mappa.</li><li>JSON: Salva e riprendi più tardi.</li><li>GPX/KML: Visualizza i nidi su Google Earth.</li></ul>
                 <h3>📋 5. Cronologia e 👤 6. Account Opzionale</h3>
                 <p>Salva i dati per 90 giorni. Crea un account gratuito per la sincronizzazione cloud e la cronologia illimitata.</p>
-                <div style="text-align:center"><a href="../apps/vespatimer/index.html" class="btn main-open-btn">${t('btn_open')}</a></div>
+                <div class="app-dropdown">
+                    <div class="split-app-btn">
+                        <a href="../apps/vespatimer/index.html" class="btn-main">${t('btn_open')}</a>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                    </div>
+                    <div class="app-dropdown-menu">
+                        <button onclick="window.location.href='../apps/vespatimer/index.html'">🌐 Apri nel browser</button>
+                        <button onclick="installPWA('../apps/vespatimer/index.html', '../apps/vespatimer/manifest.json')">📲 Installa app</button>
+                    </div>
+                </div>
                 <div class="accordion">
                     <div class="accordion-header" onclick="toggleAccordion(this)">${t('btn_instructions')} <span class="accordion-icon">+</span></div>
                     <div class="accordion-content">
@@ -1303,7 +1336,16 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
                 <ul><li>PDF: Rapport cumplet cun carta.</li><li>JSON: Memorisar e cuntinuar pli tard.</li><li>GPX/KML: Mussar ils gnieus sin Google Earth.</li></ul>
                 <h3>📋 5. Istorgia & 👤 6. Conto Opzional</h3>
                 <p>Memorisescha datas per 90 dis. Creescha in conto gratuit per la sincronisaziun cloud e l'istorgia illimitada.</p>
-                <div style="text-align:center"><a href="../apps/vespatimer/index.html" class="btn main-open-btn">${t('btn_open')}</a></div>
+                <div class="app-dropdown">
+                    <div class="split-app-btn">
+                        <a href="../apps/vespatimer/index.html" class="btn-main">${t('btn_open')}</a>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                    </div>
+                    <div class="app-dropdown-menu">
+                        <button onclick="window.location.href='../apps/vespatimer/index.html'">🌐 Avrir en navigatur</button>
+                        <button onclick="installPWA('../apps/vespatimer/index.html', '../apps/vespatimer/manifest.json')">📲 Installar l'app</button>
+                    </div>
+                </div>
                 <div class="accordion">
                     <div class="accordion-header" onclick="toggleAccordion(this)">${t('btn_instructions')} <span class="accordion-icon">+</span></div>
                     <div class="accordion-content">
@@ -1316,7 +1358,7 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
             </div>`; }
         }
     },
-                            'apiguide': {
+    'apiguide': {
         title: 'ApiGuide',
         icon: '<img src="../apps/apiguide/icon.png" style="width:30px; height:30px; border-radius:5px; vertical-align:middle; margin-right:8px;">',
         shortDesc: {
@@ -1334,7 +1376,16 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
                 <ul><li><strong>Seasons:</strong> Spring, Summer, Autumn, Winter.</li><li><strong>Activities:</strong> Organized by season.</li><li><strong>Sub-activities:</strong> Detailed breakdown.</li><li><strong>Sheets:</strong> Read-only text sheets with advice.</li></ul>
                 <h3>🌍 Multilingual & Offline</h3>
                 <p>Available in 5 independent languages (FR, EN, DE, IT, RM) and works 100% offline.</p>
-                <div style="text-align:center"><a href="../apps/apiguide/index.html" class="btn main-open-btn">${t('btn_open')}</a></div>
+                <div class="app-dropdown">
+                    <div class="split-app-btn">
+                        <a href="../apps/apiguide/index.html" class="btn-main">${t('btn_open')}</a>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                    </div>
+                    <div class="app-dropdown-menu">
+                        <button onclick="window.location.href='../apps/apiguide/index.html'">🌐 Open in Browser</button>
+                        <button onclick="installPWA('../apps/apiguide/index.html', '../apps/apiguide/manifest.json')">📲 Install App</button>
+                    </div>
+                </div>
                 <div class="accordion">
                     <div class="accordion-header" onclick="toggleAccordion(this)">${t('btn_instructions')} <span class="accordion-icon">+</span></div>
                     <div class="accordion-content">
@@ -1351,7 +1402,16 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
                 <ul><li><strong>Saisons :</strong> Printemps, Été, Automne, Hiver.</li><li><strong>Activités :</strong> Organisées par saison.</li><li><strong>Sous-activités :</strong> Affinage des sujets.</li><li><strong>Fiches :</strong> Textes de conseils en lecture seule.</li></ul>
                 <h3>🌍 Multilingue & Hors ligne</h3>
                 <p>Disponible en 5 langues indépendantes (FR, EN, DE, IT, RM) et fonctionne 100% hors ligne.</p>
-                <div style="text-align:center"><a href="../apps/apiguide/index.html" class="btn main-open-btn">${t('btn_open')}</a></div>
+                <div class="app-dropdown">
+                    <div class="split-app-btn">
+                        <a href="../apps/apiguide/index.html" class="btn-main">${t('btn_open')}</a>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                    </div>
+                    <div class="app-dropdown-menu">
+                        <button onclick="window.location.href='../apps/apiguide/index.html'">🌐 Ouvrir dans le navigateur</button>
+                        <button onclick="installPWA('../apps/apiguide/index.html', '../apps/apiguide/manifest.json')">📲 Installer l'app</button>
+                    </div>
+                </div>
                 <div class="accordion">
                     <div class="accordion-header" onclick="toggleAccordion(this)">${t('btn_instructions')} <span class="accordion-icon">+</span></div>
                     <div class="accordion-content">
@@ -1368,7 +1428,16 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
                 <ul><li><strong>Jahreszeiten:</strong> Frühling, Sommer, Herbst, Winter.</li><li><strong>Aktivitäten:</strong> Nach Jahreszeit organisiert.</li><li><strong>Unteraktivitäten:</strong> Detaillierte Aufschlüsselung.</li><li><strong>Textblätter:</strong> Read-only Textblätter mit Ratschlägen.</li></ul>
                 <h3>🌍 Mehrsprachig & Offline</h3>
                 <p>Verfügbar in 5 unabhängigen Sprachen (FR, EN, DE, IT, RM) und funktioniert 100% offline.</p>
-                <div style="text-align:center"><a href="../apps/apiguide/index.html" class="btn main-open-btn">${t('btn_open')}</a></div>
+                <div class="app-dropdown">
+                    <div class="split-app-btn">
+                        <a href="../apps/apiguide/index.html" class="btn-main">${t('btn_open')}</a>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                    </div>
+                    <div class="app-dropdown-menu">
+                        <button onclick="window.location.href='../apps/apiguide/index.html'">🌐 Im Browser öffnen</button>
+                        <button onclick="installPWA('../apps/apiguide/index.html', '../apps/apiguide/manifest.json')">📲 App installieren</button>
+                    </div>
+                </div>
                 <div class="accordion">
                     <div class="accordion-header" onclick="toggleAccordion(this)">${t('btn_instructions')} <span class="accordion-icon">+</span></div>
                     <div class="accordion-content">
@@ -1385,7 +1454,16 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
                 <ul><li><strong>Stagioni:</strong> Primavera, Estate, Autunno, Inverno.</li><li><strong>Attività:</strong> Organizzate per stagione.</li><li><strong>Sotto-attività:</strong> Suddivisione dettagliata.</li><li><strong>Schede:</strong> Schede di testo in sola lettura con consigli.</li></ul>
                 <h3>🌍 Multilingue e Offline</h3>
                 <p>Disponibile in 5 lingue indipendenti (FR, EN, DE, IT, RM) e funziona 100% offline.</p>
-                <div style="text-align:center"><a href="../apps/apiguide/index.html" class="btn main-open-btn">${t('btn_open')}</a></div>
+                <div class="app-dropdown">
+                    <div class="split-app-btn">
+                        <a href="../apps/apiguide/index.html" class="btn-main">${t('btn_open')}</a>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                    </div>
+                    <div class="app-dropdown-menu">
+                        <button onclick="window.location.href='../apps/apiguide/index.html'">🌐 Apri nel browser</button>
+                        <button onclick="installPWA('../apps/apiguide/index.html', '../apps/apiguide/manifest.json')">📲 Installa app</button>
+                    </div>
+                </div>
                 <div class="accordion">
                     <div class="accordion-header" onclick="toggleAccordion(this)">${t('btn_instructions')} <span class="accordion-icon">+</span></div>
                     <div class="accordion-content">
@@ -1402,7 +1480,16 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
                 <ul><li><strong>Stagiuns:</strong> Primavaira, Stad, Atun, Enviern.</li><li><strong>Activitats:</strong> Organisadas per stagiun.</li><li><strong>Sut-activitats:</strong> Detaglià.</li><li><strong>Fichas:</strong> Fichas da text cun cussegls.</li></ul>
                 <h3>🌍 Multilingua & Offline</h3>
                 <p>Disponibel en 5 linguas independentas (FR, EN, DE, IT, RM) e funcziunescha 100% offline.</p>
-                <div style="text-align:center"><a href="../apps/apiguide/index.html" class="btn main-open-btn">${t('btn_open')}</a></div>
+                <div class="app-dropdown">
+                    <div class="split-app-btn">
+                        <a href="../apps/apiguide/index.html" class="btn-main">${t('btn_open')}</a>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                    </div>
+                    <div class="app-dropdown-menu">
+                        <button onclick="window.location.href='../apps/apiguide/index.html'">🌐 Avrir en navigatur</button>
+                        <button onclick="installPWA('../apps/apiguide/index.html', '../apps/apiguide/manifest.json')">📲 Installar l'app</button>
+                    </div>
+                </div>
                 <div class="accordion">
                     <div class="accordion-header" onclick="toggleAccordion(this)">${t('btn_instructions')} <span class="accordion-icon">+</span></div>
                     <div class="accordion-content">
@@ -1438,7 +1525,16 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
                 <p>Hands-free voice input. Speak naturally ("3 honey frames, queen is red") and AI fills the form for you.</p>
                 <h3>6. Multilingual</h3>
                 <p>Instant switch between EN, FR, DE, IT, RM.</p>
-                <div style="text-align:center"><a href="../apps/alvearcheck/index.html" class="btn main-open-btn">${t('btn_open')}</a></div>
+                <div class="app-dropdown">
+                    <div class="split-app-btn">
+                        <a href="../apps/alvearcheck/index.html" class="btn-main">${t('btn_open')}</a>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                    </div>
+                    <div class="app-dropdown-menu">
+                        <button onclick="window.location.href='../apps/alvearcheck/index.html'">🌐 Open in Browser</button>
+                        <button onclick="installPWA('../apps/alvearcheck/index.html', '../apps/alvearcheck/manifest.json')">📲 Install App</button>
+                    </div>
+                </div>
                 <div class="accordion">
                     <div class="accordion-header" onclick="toggleAccordion(this)">${t('btn_instructions')} <span class="accordion-icon">+</span></div>
                     <div class="accordion-content">
@@ -1462,7 +1558,16 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
                 <p>Saisie vocale mains libres. Parlez naturellement ("3 cadres de miel, reine rouge") et l'IA remplit le formulaire.</p>
                 <h3>6. Multilingue</h3>
                 <p>Basculez instantanément entre FR, EN, DE, IT, RM.</p>
-                <div style="text-align:center"><a href="../apps/alvearcheck/index.html" class="btn main-open-btn">${t('btn_open')}</a></div>
+                <div class="app-dropdown">
+                    <div class="split-app-btn">
+                        <a href="../apps/alvearcheck/index.html" class="btn-main">${t('btn_open')}</a>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                    </div>
+                    <div class="app-dropdown-menu">
+                        <button onclick="window.location.href='../apps/alvearcheck/index.html'">🌐 Ouvrir dans le navigateur</button>
+                        <button onclick="installPWA('../apps/alvearcheck/index.html', '../apps/alvearcheck/manifest.json')">📲 Installer l'app</button>
+                    </div>
+                </div>
                 <div class="accordion">
                     <div class="accordion-header" onclick="toggleAccordion(this)">${t('btn_instructions')} <span class="accordion-icon">+</span></div>
                     <div class="accordion-content">
@@ -1486,7 +1591,16 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
                 <p>Freisprech-Spracheingabe. Sprechen Sie natürlich ("3 Honigrahmen, Königin ist rot") und die KI füllt das Formular für Sie aus.</p>
                 <h3>6. Mehrsprachig</h3>
                 <p>Nahtloses Umschalten zwischen EN, FR, DE, IT, RM.</p>
-                <div style="text-align:center"><a href="../apps/alvearcheck/index.html" class="btn main-open-btn">${t('btn_open')}</a></div>
+                <div class="app-dropdown">
+                    <div class="split-app-btn">
+                        <a href="../apps/alvearcheck/index.html" class="btn-main">${t('btn_open')}</a>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                    </div>
+                    <div class="app-dropdown-menu">
+                        <button onclick="window.location.href='../apps/alvearcheck/index.html'">🌐 Im Browser öffnen</button>
+                        <button onclick="installPWA('../apps/alvearcheck/index.html', '../apps/alvearcheck/manifest.json')">📲 App installieren</button>
+                    </div>
+                </div>
                 <div class="accordion">
                     <div class="accordion-header" onclick="toggleAccordion(this)">${t('btn_instructions')} <span class="accordion-icon">+</span></div>
                     <div class="accordion-content">
@@ -1510,7 +1624,16 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
                 <p>Input vocale a mani libere. Parla naturalmente ("3 telai di miele, la regina è rossa") e l'IA compilerà il modulo per te.</p>
                 <h3>6. Multilingue</h3>
                 <p>Passa istantaneamente tra EN, FR, DE, IT, RM.</p>
-                <div style="text-align:center"><a href="../apps/alvearcheck/index.html" class="btn main-open-btn">${t('btn_open')}</a></div>
+                <div class="app-dropdown">
+                    <div class="split-app-btn">
+                        <a href="../apps/alvearcheck/index.html" class="btn-main">${t('btn_open')}</a>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                    </div>
+                    <div class="app-dropdown-menu">
+                        <button onclick="window.location.href='../apps/alvearcheck/index.html'">🌐 Apri nel browser</button>
+                        <button onclick="installPWA('../apps/alvearcheck/index.html', '../apps/alvearcheck/manifest.json')">📲 Installa app</button>
+                    </div>
+                </div>
                 <div class="accordion">
                     <div class="accordion-header" onclick="toggleAccordion(this)">${t('btn_instructions')} <span class="accordion-icon">+</span></div>
                     <div class="accordion-content">
@@ -1534,7 +1657,16 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
                 <p>Entrada vocala a mauns libers. Discuorra naturalmain ("3 caders da mel, regina cotschna") e l'IA emplenescha il formular per tai.</p>
                 <h3>6. Multilingua</h3>
                 <p>Midar instantanamain tranter EN, FR, DE, IT, RM.</p>
-                <div style="text-align:center"><a href="../apps/alvearcheck/index.html" class="btn main-open-btn">${t('btn_open')}</a></div>
+                <div class="app-dropdown">
+                    <div class="split-app-btn">
+                        <a href="../apps/alvearcheck/index.html" class="btn-main">${t('btn_open')}</a>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                    </div>
+                    <div class="app-dropdown-menu">
+                        <button onclick="window.location.href='../apps/alvearcheck/index.html'">🌐 Avrir en navigatur</button>
+                        <button onclick="installPWA('../apps/alvearcheck/index.html', '../apps/alvearcheck/manifest.json')">📲 Installar l'app</button>
+                    </div>
+                </div>
                 <div class="accordion">
                     <div class="accordion-header" onclick="toggleAccordion(this)">${t('btn_instructions')} <span class="accordion-icon">+</span></div>
                     <div class="accordion-content">
