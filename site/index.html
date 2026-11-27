@@ -1272,17 +1272,13 @@ search_tag_app: "App", search_tag_page: "Pagina", search_tag_blog: "Blog", searc
 }
 // --- DROPDOWN LOGIC ---
 function toggleAppDropdown(btn) {
-    // Find the parent .app-dropdown container
     const dropdownContainer = btn.closest('.app-dropdown');
-    // Find the menu inside that specific container
     const menu = dropdownContainer.querySelector('.app-dropdown-menu');
     
-    // Close all other menus
     document.querySelectorAll('.app-dropdown-menu').forEach(m => {
         if (m !== menu) m.classList.remove('show');
     });
     
-    // Toggle the clicked one
     menu.classList.toggle('show');
 }
 
