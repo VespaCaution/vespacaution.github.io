@@ -1285,7 +1285,6 @@ function toggleAppDropdown(btn) {
     // Toggle the clicked one
     menu.classList.toggle('show');
 }
-    event.target.nextElementSibling.classList.toggle('show');
 
 window.addEventListener('click', function() {
     document.querySelectorAll('.app-dropdown-menu').forEach(menu => {
@@ -1357,7 +1356,7 @@ function installPWA(appUrl, manifestUrl) {
                 <div class="app-dropdown">
                     <div class="split-app-btn">
                         <a href="../apps/vespatimer/index.html" class="btn-main">${t('btn_open')}</a>
-                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(this)">▼</button>
                     </div>
                     <div class="app-dropdown-menu">
                         <button onclick="window.location.href='../apps/vespatimer/index.html'">🌐 Open in Browser</button>
@@ -1390,7 +1389,7 @@ function installPWA(appUrl, manifestUrl) {
                 <div class="app-dropdown">
                     <div class="split-app-btn">
                         <a href="../apps/vespatimer/index.html" class="btn-main">${t('btn_open')}</a>
-                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(this)">▼</button>
                     </div>
                     <div class="app-dropdown-menu">
                         <button onclick="window.location.href='../apps/vespatimer/index.html'">🌐 Ouvrir dans le navigateur</button>
@@ -1423,7 +1422,7 @@ function installPWA(appUrl, manifestUrl) {
                 <div class="app-dropdown">
                     <div class="split-app-btn">
                         <a href="../apps/vespatimer/index.html" class="btn-main">${t('btn_open')}</a>
-                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(this)">▼</button>
                     </div>
                     <div class="app-dropdown-menu">
                         <button onclick="window.location.href='../apps/vespatimer/index.html'">🌐 Im Browser öffnen</button>
@@ -1456,7 +1455,7 @@ function installPWA(appUrl, manifestUrl) {
                 <div class="app-dropdown">
                     <div class="split-app-btn">
                         <a href="../apps/vespatimer/index.html" class="btn-main">${t('btn_open')}</a>
-                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(this)">▼</button>
                     </div>
                     <div class="app-dropdown-menu">
                         <button onclick="window.location.href='../apps/vespatimer/index.html'">🌐 Apri nel browser</button>
@@ -1489,7 +1488,7 @@ function installPWA(appUrl, manifestUrl) {
                 <div class="app-dropdown">
                     <div class="split-app-btn">
                         <a href="../apps/vespatimer/index.html" class="btn-main">${t('btn_open')}</a>
-                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(this)">▼</button>
                     </div>
                     <div class="app-dropdown-menu">
                         <button onclick="window.location.href='../apps/vespatimer/index.html'">🌐 Avrir en navigatur</button>
@@ -1529,7 +1528,7 @@ function installPWA(appUrl, manifestUrl) {
                 <div class="app-dropdown">
                     <div class="split-app-btn">
                         <a href="../apps/apiguide/index.html" class="btn-main">${t('btn_open')}</a>
-                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(this)">▼</button>
                     </div>
                     <div class="app-dropdown-menu">
                         <button onclick="window.location.href='../apps/apiguide/index.html'">🌐 Open in Browser</button>
@@ -1555,7 +1554,7 @@ function installPWA(appUrl, manifestUrl) {
                 <div class="app-dropdown">
                     <div class="split-app-btn">
                         <a href="../apps/apiguide/index.html" class="btn-main">${t('btn_open')}</a>
-                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(this)">▼</button>
                     </div>
                     <div class="app-dropdown-menu">
                         <button onclick="window.location.href='../apps/apiguide/index.html'">🌐 Ouvrir dans le navigateur</button>
@@ -1581,7 +1580,7 @@ function installPWA(appUrl, manifestUrl) {
                 <div class="app-dropdown">
                     <div class="split-app-btn">
                         <a href="../apps/apiguide/index.html" class="btn-main">${t('btn_open')}</a>
-                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(this)">▼</button>
                     </div>
                     <div class="app-dropdown-menu">
                         <button onclick="window.location.href='../apps/apiguide/index.html'">🌐 Im Browser öffnen</button>
@@ -1607,7 +1606,7 @@ function installPWA(appUrl, manifestUrl) {
                 <div class="app-dropdown">
                     <div class="split-app-btn">
                         <a href="../apps/apiguide/index.html" class="btn-main">${t('btn_open')}</a>
-                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(this)">▼</button>
                     </div>
                     <div class="app-dropdown-menu">
                         <button onclick="window.location.href='../apps/apiguide/index.html'">🌐 Apri nel browser</button>
@@ -1633,7 +1632,7 @@ function installPWA(appUrl, manifestUrl) {
                 <div class="app-dropdown">
                     <div class="split-app-btn">
                         <a href="../apps/apiguide/index.html" class="btn-main">${t('btn_open')}</a>
-                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(this)">▼</button>
                     </div>
                     <div class="app-dropdown-menu">
                         <button onclick="window.location.href='../apps/apiguide/index.html'">🌐 Avrir en navigatur</button>
@@ -1678,7 +1677,7 @@ function installPWA(appUrl, manifestUrl) {
                 <div class="app-dropdown">
                     <div class="split-app-btn">
                         <a href="../apps/alvearcheck/index.html" class="btn-main">${t('btn_open')}</a>
-                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(this)">▼</button>
                     </div>
                     <div class="app-dropdown-menu">
                         <button onclick="window.location.href='../apps/alvearcheck/index.html'">🌐 Open in Browser</button>
@@ -1711,7 +1710,7 @@ function installPWA(appUrl, manifestUrl) {
                 <div class="app-dropdown">
                     <div class="split-app-btn">
                         <a href="../apps/alvearcheck/index.html" class="btn-main">${t('btn_open')}</a>
-                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(this)">▼</button>
                     </div>
                     <div class="app-dropdown-menu">
                         <button onclick="window.location.href='../apps/alvearcheck/index.html'">🌐 Ouvrir dans le navigateur</button>
@@ -1744,7 +1743,7 @@ function installPWA(appUrl, manifestUrl) {
                 <div class="app-dropdown">
                     <div class="split-app-btn">
                         <a href="../apps/alvearcheck/index.html" class="btn-main">${t('btn_open')}</a>
-                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(this)">▼</button>
                     </div>
                     <div class="app-dropdown-menu">
                         <button onclick="window.location.href='../apps/alvearcheck/index.html'">🌐 Im Browser öffnen</button>
@@ -1777,7 +1776,7 @@ function installPWA(appUrl, manifestUrl) {
                 <div class="app-dropdown">
                     <div class="split-app-btn">
                         <a href="../apps/alvearcheck/index.html" class="btn-main">${t('btn_open')}</a>
-                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(this)">▼</button>
                     </div>
                     <div class="app-dropdown-menu">
                         <button onclick="window.location.href='../apps/alvearcheck/index.html'">🌐 Apri nel browser</button>
@@ -1810,7 +1809,7 @@ function installPWA(appUrl, manifestUrl) {
                 <div class="app-dropdown">
                     <div class="split-app-btn">
                         <a href="../apps/alvearcheck/index.html" class="btn-main">${t('btn_open')}</a>
-                        <button class="btn-toggle" onclick="toggleAppDropdown(event)">▼</button>
+                        <button class="btn-toggle" onclick="toggleAppDropdown(this)">▼</button>
                     </div>
                     <div class="app-dropdown-menu">
                         <button onclick="window.location.href='../apps/alvearcheck/index.html'">🌐 Avrir en navigatur</button>
