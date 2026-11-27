@@ -32,7 +32,12 @@ self.addEventListener('activate', (e) => {
 
 // Fetch Event: Network-First with Offline Fallback
 self.addEventListener('fetch', (e) => {
-  // Intercept page navigation
+  // 1. DO NOT CACHE POST REQUESTS (Fixes the error you saw in the console)
+  if (e.request.method !== 'GET') {
+    return; 
+  }
+
+  // 2. Intercept page navigation
   if (e.request.mode === 'navigate') {
     e.respondWith(
       fetch(e.request)
@@ -51,7 +56,7 @@ self.addEventListener('fetch', (e) => {
         })
     );
   } else {
-    // Stale-While-Revalidate for assets
+    // 3. Stale-While-Revalidate for assets (CSS, JS, Images)
     e.respondWith(
       caches.match(e.request).then((cachedResponse) => {
         const fetchPromise = fetch(e.request).then((networkResponse) => {
